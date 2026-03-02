@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Fuerza Total - Entrena con Propósito</title>
+    <style>
+        :root {
+            --color-principal: #FF5722; 
+            --color-secundario: #212121; 
+            --color-fondo: #121212; 
+            --color-texto: #E0E0E0; 
+            --ancho-maximo: 1200px; 
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+
+        /* --- Contenedor central --- */
+        .contenedor-centrado {
+            max-width: var(--ancho-maximo);
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* --- HEADER --- */
+        .header {
+            background-color: var(--color-secundario);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--color-principal);
+            position: sticky; 
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--color-principal);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-menu ul li a {
+            color: var(--color-texto);
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            transition: color 0.3s, background-color 0.3s;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .nav-menu ul li a:hover {
+            color: var(--color-secundario);
+            background-color: var(--color-principal);
+        }
+
+        /* --- SECCIONES --- */
+        .seccion {
+            padding: 80px 5%; 
+            text-align: center;
+        }
+        
+        .seccion-contenido { 
+            max-width: var(--ancho-maximo);
+            margin: 0 auto;
+            text-align: left; 
+        }
+        
+        .seccion:nth-child(2n) { 
+            background-color: var(--color-secundario);
+        }
+
+        .seccion h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: var(--color-principal);
+            text-transform: uppercase;
+            text-align: center; 
+        }
+        
+        .seccion ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        
+        .seccion li {
+            margin-bottom: 10px;
+        }
+
+        /* --- HERO --- */
+        #hero {
+            /* Imagen de fondo genérica de gimnasio */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop') no-repeat center center/cover;
+            color: white;
+            padding: 150px 5%;
+        }
+
+        #hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+        
+        #hero p {
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .btn-principal {
+            display: inline-block;
+            background-color: var(--color-principal);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-principal:hover {
+            background-color: #E64A19; 
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            background-color: var(--color-secundario);
+            color: var(--color-texto);
+            text-align: center;
+            padding: 30px 5%;
+            border-top: 3px solid var(--color-principal);
+        }
+        
+        .highlight {
+            color: var(--color-principal);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Fuerza Total</a>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#bienvenida">Inicio</a></li>
+                <li><a href="#nuestros-servicios">Servicios</a></li>
+                <li><a href="#por-que-elegirnos">Por Qué</a></li>
+                <li><a href="#Return" id="btn-salida">Salida</a></li>
+                <li><a href="#contacto" class="btn-principal" style="padding: 5px 15px; margin: 0; margin-top:0;">Únete Hoy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="hero">
+            <div class="seccion-contenido" style="text-align: center;">
+                <h1>Gym Fuerza Total</h1>
+                <p>Tu camino hacia una vida más fuerte y saludable. <br><strong>¡Entrena con Propósito!</strong></p>
+                <a href="#contacto" class="btn-principal">Inicia tu Prueba Gratis</a>
+            </div>
+        </section>
+
+        <section id="bienvenida" class="seccion">
+            <div class="seccion-contenido">
+                <h2>¡Bienvenido a Gym Fuerza Total!</h2>
+                <p>
+                    En <strong>Gym Fuerza Total</strong>, estamos comprometidos con tu bienestar y tus objetivos de acondicionamiento físico. Somos más que un gimnasio; somos una comunidad dedicada a ayudarte a alcanzar tu <span class="highlight">máximo potencial</span>, sin importar tu nivel de experiencia.
+                </p>
+            </div>
+        </section>
+
+        <section id="nuestros-servicios" class="seccion">
+            <div class="seccion-contenido">
+                <h2>Nuestros Servicios Destacados</h2>
+                <ul>
+                    <li><strong>Entrenamiento Personalizado</strong></li>
+                    <li><strong>Clases Grupales (Zumba, Pilates)</strong></li>
+                    <li><strong>Área de Pesas y Cardio</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion">
+            <div class="seccion-contenido" style="text-align: center;">
+                <h2>¡No esperes más!</h2>
+                <a href="mailto:info@fuerzatotal.com" class="btn-principal">Contáctanos por Email</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Gym Fuerza Total. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('btn-salida').addEventListener('click', function(e) {
+            e.preventDefault(); // Evita que se recargue la página o salte al ancla
+            
+            // Preguntamos al usuario si desea salir
+            if(confirm("¿Estás seguro de que deseas salir y volver al Menú Principal?")) {
+                
+                // Redirige EXACTAMENTE a la ruta local de tu archivo
+                window.location.href = "file:///C:/Users/pc/Desktop/6TO/index.html";
+            }
+        });
+    </script>
+
+</body>
+</html>

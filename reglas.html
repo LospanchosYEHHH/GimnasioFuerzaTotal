@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reglamento Oficial | Fuerza Total Gimnasio</title>
+    
+    <style>
+        /* --- VARIABLES Y RESET (Mismos que las otras páginas) --- */
+        :root {
+            --color-principal: #FF5722; 
+            --color-principal-hover: #E64A19;
+            --color-secundario: #1E1E1E; 
+            --color-fondo: #121212; 
+            --color-texto: #E0E0E0;
+            --color-texto-tenue: #B0B0B0;
+            --color-alerta: #D32F2F;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+
+        /* --- HEADER SIMPLIFICADO --- */
+        .header {
+            background-color: rgba(30, 30, 30, 0.95);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--color-principal);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 800;
+            color: var(--color-principal);
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .btn-volver {
+            background-color: transparent;
+            border: 2px solid var(--color-principal);
+            color: var(--color-texto);
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn-volver:hover {
+            background-color: var(--color-principal);
+            color: #fff;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .titulo-pagina {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .titulo-pagina h1 {
+            font-size: 2.5em;
+            color: var(--color-principal);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .titulo-pagina p {
+            color: var(--color-texto-tenue);
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* --- SECCIONES DE REGLAS --- */
+        .seccion-reglas {
+            background-color: var(--color-secundario);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .seccion-reglas h2 {
+            color: var(--color-principal);
+            border-bottom: 1px solid #444;
+            padding-bottom: 15px;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* --- LISTA ESTILIZADA --- */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            background-color: rgba(255, 255, 255, 0.03);
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid var(--color-principal); /* Borde naranja a la izquierda */
+            transition: transform 0.2s;
+        }
+
+        ul li:hover {
+            transform: translateX(5px);
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+
+        strong {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- NOTA DE ADVERTENCIA --- */
+        .nota-alerta {
+            background-color: rgba(211, 47, 47, 0.1); /* Rojo muy oscuro/transparente */
+            border: 2px solid var(--color-alerta);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .nota-alerta p {
+            margin: 10px 0;
+            color: #ffcccc;
+        }
+
+        .nota-alerta strong {
+            color: #ff5252;
+            font-size: 1.1em;
+        }
+
+        /* --- FOOTER --- */
+        .footer-simple {
+            text-align: center;
+            padding: 40px;
+            color: var(--color-texto-tenue);
+            font-size: 0.9em;
+            border-top: 1px solid #333;
+            margin-top: 40px;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .titulo-pagina h1 {
+                font-size: 1.8em;
+            }
+            .seccion-reglas {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">💪 FUERZATOTAL</a>
+        <a href="index.html" class="btn-volver">← Volver al Inicio</a>
+    </header>
+
+    <div class="container">
+        
+        <div class="titulo-pagina">
+            <h1>Reglamento Interno</h1>
+            <p>Para garantizar un ambiente seguro, respetuoso y efectivo, el cumplimiento de estas normas es obligatorio para todos los miembros.</p>
+        </div>
+        
+        <div class="seccion-reglas">
+            <h2>🏋️‍♂️ Equipamiento y Área de Entrenamiento</h2>
+            <ul>
+                <li>
+                    <strong>Organización:</strong> Es obligatorio devolver todo el equipo (mancuernas, discos, barras) a su lugar designado inmediatamente después de su uso.
+                </li>
+                <li>
+                    <strong>Limpieza:</strong> Por higiene, utilice las toallas y soluciones desinfectantes provistas para limpiar las máquinas y bancas después de cada ejercicio.
+                </li>
+                <li>
+                    <strong>Uso Compartido:</strong> No monopolice el equipo. Si está descansando entre series, permita que otros miembros trabajen por turnos ("alternar").
+                </li>
+                <li>
+                    <strong>Zonas Libres:</strong> Mantenga el suelo despejado. No deje objetos personales (bolsos, chaquetas, móviles) donde puedan causar tropiezos.
+                </li>
+            </ul>
+        </div>
+
+        <div class="seccion-reglas">
+            <h2>🛡️ Conducta General y Seguridad</h2>
+            <ul>
+                <li>
+                    <strong>Vestimenta:</strong> Se requiere ropa deportiva adecuada y calzado cerrado en todo momento. Prohibido entrenar sin camiseta o con sandalias.
+                </li>
+                <li>
+                    <strong>Respeto:</strong> Mantenga un lenguaje apropiado. Queda estrictamente prohibido el acoso, la intimidación o las faltas de respeto a otros miembros o al personal.
+                </li>
+                <li>
+                    <strong>Móviles:</strong> El uso del teléfono debe ser discreto. Las llamadas de voz o video están permitidas solo en el lobby, no en la zona de pesas.
+                </li>
+                <li>
+                    <strong>Riesgo:</strong> No realice ejercicios con técnicas peligrosas o pesos excesivos sin la experiencia adecuada o la supervisión de un entrenador.
+                </li>
+            </ul>
+        </div>
+        
+        <div class="seccion-reglas">
+            <h2>🔑 Membresías y Acceso</h2>
+            <ul>
+                <li>
+                    <strong>Acceso:</strong> Es obligatorio presentar su tarjeta, huella o código de membresía en la recepción para ingresar.
+                </li>
+                <li>
+                    <strong>Intransferible:</strong> Las membresías son personales. Prestar su carnet o permitir el acceso a no-miembros es motivo de expulsión inmediata.
+                </li>
+                <li>
+                    <strong>Pagos:</strong> Las cuotas deben estar al día. El sistema bloqueará el acceso automáticamente si existen pagos pendientes.
+                </li>
+            </ul>
+        </div>
+
+        <div class="nota-alerta">
+            <p>⚠️ <strong>IMPORTANTE</strong></p>
+            <p>El incumplimiento reiterado de cualquiera de estas reglas puede resultar en la suspensión temporal o permanente de la membresía, sin derecho a reembolso.</p>
+            <br>
+            <p>¡Gracias por su colaboración para hacer de FuerzaTotal el mejor lugar para entrenar!</p>
+        </div>
+
+    </div>
+
+    <footer class="footer-simple">
+        &copy; 2025 Gimnasio FuerzaTotal. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>

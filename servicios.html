@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción | Gimnasio FuerzaTotal 💪</title>
+    
+    <style>
+        :root {
+            --color-principal: #FF5722; 
+            --color-principal-hover: #E64A19;
+            --color-secundario: #1E1E1E; 
+            --color-fondo: #121212; 
+            --color-input-bg: #2C2C2C;
+            --color-texto: #E0E0E0; 
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: var(--color-secundario);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border-top: 5px solid var(--color-principal);
+        }
+
+        h1 {
+            color: var(--color-principal);
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        .descripcion {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #aaa;
+        }
+
+        fieldset {
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        legend {
+            background-color: var(--color-principal);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--color-input-bg);
+            border: 2px solid #444;
+            border-radius: 6px;
+            color: white;
+            font-size: 1em;
+            box-sizing: border-box; 
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--color-principal);
+            background-color: #333;
+        }
+
+        .radio-group, .checkbox-group {
+            margin-top: 15px;
+            background: var(--color-input-bg);
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        .radio-option, .checkbox-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+            accent-color: var(--color-principal);
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        label a {
+            color: var(--color-principal);
+            text-decoration: underline;
+        }
+
+        /* --- Contenedor de Botones (Nuevo) --- */
+        .botones-accion {
+            display: flex;
+            gap: 15px; /* Espacio entre botones */
+        }
+
+        /* Botón de Enviar */
+        input[type="submit"] {
+            flex: 2; /* Ocupa más espacio */
+            padding: 15px;
+            background-color: var(--color-principal);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: var(--color-principal-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
+        }
+
+        /* Botón de Cancelar (Nuevo) */
+        .btn-cancelar {
+            flex: 1; /* Ocupa menos espacio */
+            padding: 15px;
+            background-color: #424242;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .btn-cancelar:hover {
+            background-color: #616161;
+        }
+
+        @media (max-width: 500px) {
+            .container { padding: 20px; }
+            h1 { font-size: 1.5em; }
+            .botones-accion { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Inscripción FitZone</h1>
+        <p class="descripcion">¡Estás a un paso de transformar tu cuerpo! Completa tus datos.</p>
+        
+        <form id="formulario-inscripcion" action="#" method="POST"> 
+            <fieldset>
+                <legend>👤 Datos Personales</legend>
+                
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre_completo" placeholder="Ej: Juan Pérez" required>
+                
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="correo_electronico" placeholder="juan@email.com" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="Ej: 8091234567" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>💳 Membresía</legend>
+                
+                <label for="membresia">Elige tu Plan:</label>
+                <select id="membresia" name="tipo_membresia" required>
+                    <option value="">-- Seleccione una opción --</option>
+                    <option value="basico">Plan Básico ($75)</option>
+                    <option value="premium">Plan Premium ($120)</option>
+                    <option value="blackcard">Blackcard VIP ($300)</option>
+                </select>
+                
+                <label style="margin-top: 20px;">Horario Preferido:</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="manana" name="horario" value="manana" checked>
+                        <label for="manana" style="margin:0;">Mañana (6 AM - 12 PM)</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="tarde" name="horario" value="tarde">
+                        <label for="tarde" style="margin:0;">Tarde (12 PM - 5 PM)</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="noche" name="horario" value="noche">
+                        <label for="noche" style="margin:0;">Noche (5 PM - 10 PM)</label>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>📝 Confirmación</legend>
+                
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="terminos" name="acepta_terminos" required>
+                        <label for="terminos" style="margin:0;">Acepto los <a href="#">Términos y Condiciones</a>.</label>
+                    </div>
+                    
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="newsletter" name="suscribir_newsletter">
+                        <label for="newsletter" style="margin:0;">Recibir ofertas y noticias.</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="botones-accion">
+                <button type="button" id="btn-cancelar" class="btn-cancelar">Volver</button>
+                <input type="submit" value="Finalizar Inscripción">
+            </div>
+            
+        </form>
+    </div>
+
+    <script>
+        // Definimos la ruta de tu menú principal
+        const rutaMenuPrincipal = "file:///C:/Users/pc/Desktop/6TO/index.html";
+
+        // 1. Lógica para el botón de enviar (Cuando terminas el formulario)
+        document.getElementById('formulario-inscripcion').addEventListener('submit', function(event) {
+            // Evitamos que el formulario se envíe de verdad (ya que no hay servidor)
+            event.preventDefault();
+
+            // Mensaje de éxito
+            alert("¡Felicidades! Tu inscripción ha sido procesada con éxito. \n\nAhora volverás al menú principal.");
+
+            // Redirección al archivo del escritorio
+            window.location.href = rutaMenuPrincipal;
+        });
+
+        // 2. Lógica para el botón de Volver / Cancelar
+        document.getElementById('btn-cancelar').addEventListener('click', function() {
+            // Regresa directamente sin mensaje de éxito
+            window.location.href = rutaMenuPrincipal;
+        });
+    </script>
+
+</body>
+</html>
